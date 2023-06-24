@@ -1,0 +1,33 @@
+{
+  "name": "send-tweet-v2-action",
+  "version": "1.0.0",
+  "description": "GitHub action to post a tweet using the Twitter v2 API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smapiot/send-tweet-v2-action.git"
+  },
+  "keywords": [
+    "tweet",
+    "twitter",
+    "github",
+    "action",
+    "github-actions"
+  ],
+  "author": "smapiot",
+  "homepage": "https://piral.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smapiot/send-tweet-v2-action/issues"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.0.3",
+    "@actions/github": "^5.1.1",
+    "twitter-api-v2": "^1.15.0"
+  }
+}

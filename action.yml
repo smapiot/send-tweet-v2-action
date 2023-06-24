@@ -1,0 +1,38 @@
+name: 'Send Tweet v2'
+description: 'Publish a tweet using the Twitter v2 API.'
+branding:
+  icon: package
+  color: green
+inputs:
+  status:
+    description: 'The content of the tweet to send.'
+    required: true
+    default: 'Hello World!'
+  consumer-key:
+    description: 'The generated Consumer Key from the Twitter developer page.'
+    required: true
+    default: 'a1b2...'
+  consumer-secret:
+    description: 'The generated Consumer Secret from the Twitter developer page.'
+    required: true
+    default: '1abc...'
+  access-token:
+    description: 'The generated Access Token from the Twitter developer page.'
+    required: true
+    default: '1234...-AnLq...'
+  access-token-secret:
+    description: 'The generated Access Token Secret from the Twitter developer page.'
+    required: true
+    default: 'abQA22...'
+outputs:
+  id:
+    description: 'The id of the creted tweet.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.status }}
+    - ${{ inputs.consumer-key }}
+    - ${{ inputs.consumer-secret }}
+    - ${{ inputs.access-token }}
+    - ${{ inputs.access-token-secret }}
